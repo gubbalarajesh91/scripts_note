@@ -1,0 +1,9 @@
+sudo dnf install ansible -y
+**************************
+ansible -i inventory.ini web --list-hosts
+ansible -i inventory.ini all --list-hosts
+
+Playbook
+ansible-playbook -i inventory.ini -e ansible_name=ec2_user -e ansible_password=DevOps321 01-ping.yaml
+
+ansible-playbook -i inventory.ini -e ansible_name=ec2_user -e ansible_password=DevOps321 02-nginx.yaml
